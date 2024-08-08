@@ -152,8 +152,11 @@ header {
 }
 
 .sidebar ul li a:hover {
-  text-decoration: underline;
+  color: #3BB77E; /* Green color on hover */
+  transform: scale(1.1); /* Slightly enlarge text */
+  transition: transform 0.2s ease; /* Smooth scaling transition */
 }
+
 
 
 /* Fresh Vegetables BIG SALE Banner */
