@@ -121,6 +121,27 @@ header {
 .sidebar ul li {
   margin: 10px 0;
   animation: slideIn 0.5s ease-in-out;
+  position: relative; /* Necessary for shadow positioning */
+}
+
+/* Shadow for selected item */
+.sidebar ul li.selected {
+  box-shadow: 0 4px 8px rgba(59, 183, 126, 0.6); /* Change shadow color */
+}
+
+/* Image styling */
+.sidebar ul li a img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  border-radius: 50%; /* Make image circular */
+  margin-right: 10px; /* Space between image and text */
+  vertical-align: middle; /* Align image with text */
+}
+
+/* Optional: Style for active link */
+.sidebar ul li a.active {
+  color: #4CAF50; /* Highlight color for active link */
+  font-weight: bold;
 }
 
 .sidebar ul li a {
@@ -134,13 +155,14 @@ header {
   text-decoration: underline;
 }
 
+
 /* Fresh Vegetables BIG SALE Banner */
 .sale-banner {
   background: rgba(255, 255, 255, 1);
   padding: 20px;
   text-align: center;
   border-radius: 10px; /* Add rounded corners */
-  margin-top: 20px; /* Ensure there's a margin to separate from other content */
+  margin-top: 30px; /* Ensure there's a margin to separate from other content */
 }
 
 .sale-banner h2 {
