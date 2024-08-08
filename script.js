@@ -22,3 +22,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const listItems = document.querySelectorAll('.sidebar ul li');
+
+    listItems.forEach(item => {
+        item.addEventListener('click', function () {
+            // Remove the 'selected' class from all items
+            listItems.forEach(li => li.classList.remove('selected'));
+
+            // Add the 'selected' class to the clicked item
+            this.classList.add('selected');
+        });
+    });
+});
