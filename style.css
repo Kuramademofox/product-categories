@@ -326,6 +326,7 @@ input, button {
 /* Shadow for selected item */
 .sidebar ul li.selected {
   box-shadow: 0 4px 8px rgba(59, 183, 126, 0.6); /* Change shadow color */
+    border-radius: 10px;
 }
 
 /* Image styling */
@@ -335,6 +336,7 @@ input, button {
   border-radius: 50%; /* Make image circular */
   margin-right: 10px; /* Space between image and text */
   vertical-align: middle; /* Align image with text */
+    
 }
 
 /* Optional: Style for active link */
@@ -442,6 +444,7 @@ input, button {
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;
+    border-radius: 10px;
 }
 
 .products {
@@ -458,6 +461,7 @@ input, button {
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 10px; /* Add rounded corners */
 }
 
 .product:hover {
@@ -468,6 +472,7 @@ input, button {
 .product img {
   max-width: 100%;
   height: auto;
+    border-radius: 10px;
 }
 
 .product h3 {
@@ -833,3 +838,8 @@ footer {
   font-size: 20px;
   margin: 0 3px; /* Adjust the value as needed */
 }
+
+
+
+
+
