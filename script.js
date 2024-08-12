@@ -1,5 +1,5 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function () {
+    // Rating stars logic
     const ratings = document.querySelectorAll('.rating');
 
     ratings.forEach(rating => {
@@ -20,9 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
+    // Sidebar selection logic
     const listItems = document.querySelectorAll('.sidebar ul li');
 
     listItems.forEach(item => {
@@ -34,10 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('selected');
         });
     });
-});
 
-
-document.addEventListener('DOMContentLoaded', function() {
+    // Product sorting logic
     const productsContainer = document.querySelector('.products');
     const products = Array.from(document.querySelectorAll('.products .product'));
     const resultsCount = document.getElementById('results-count');
@@ -79,10 +76,19 @@ document.addEventListener('DOMContentLoaded', function() {
         // Clear the current product list and append the sorted products
         productsContainer.innerHTML = '';
         sortedProducts.forEach(product => productsContainer.appendChild(product));
-
-        
-
-        
     });
+
+    // Store timing logic
+    const header = document.querySelector('.header');
+    const now = new Date();
+    const currentHour = now.getHours();
+
+    // Store timings: 6:00 AM to 12:00 AM (midnight)
+    if (currentHour < 6 || currentHour >= 24) {
+        header.style.backgroundColor = '#800080';
+        
+    }
+    
 });
+
 
