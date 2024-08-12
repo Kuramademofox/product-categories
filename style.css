@@ -34,7 +34,7 @@ input, button {
 .search-bar-container {
   display: flex;
   align-items: center;
-  width: 900px; /* Adjust this value to make the container smaller */
+  width: 600px; /* Adjust this value to make the container smaller */
   margin: 0 20px;
 }
 
@@ -842,4 +842,67 @@ footer {
 
 
 
+.coming-soon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.coming-soon-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the background area */
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Sends the image behind the text */
+  filter: blur(5px); /* Blurs the background image */
+  opacity: 0.7; /* Makes the image slightly transparent */
+}
+
+
+.coming-soon h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  position: relative;
+  animation: glitch 1s infinite;
+
+}
+
+.coming-soon h1::before,
+.coming-soon h1::after {
+  content: 'Coming Soon';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.coming-soon h1::before {
+  left: 2px;
+  text-shadow: -2px 0 red;
+  animation: glitch-anim-1 1.5s infinite linear alternate-reverse;
+}
+
+.coming-soon h1::after {
+  left: -2px;
+  text-shadow: -2px 0 blue;
+  animation: glitch-anim-2 1.5s infinite linear alternate-reverse;
+}
+.coming-soon p {
+  color: rgba(222, 249, 236, 1);
+;
+}
 
